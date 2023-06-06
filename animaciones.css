@@ -1,0 +1,42 @@
+/* Hover de los elementos "a" del navbar */
+
+.navbar-list li {
+    position: relative;
+    padding: 0;
+}
+
+.navbar-list li a::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+}
+
+.navbar-list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+/* Botones */
+
+.hero-button:hover,
+.btn-buy:hover,
+.form button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+
+/* Productos */
+
+.rotate:hover {
+    transform: rotateY(90deg);
+    transition: 0.8s;
+}
+

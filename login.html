@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animaciones.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo-black.png" alt="brand-logo" class="logo">  
+        <nav class="navbar">
+          <!-- Menú hamburguesa -->
+
+        <label for="menu-toggle" class="menu-label">
+          <img src="assets/img/bars-solid.svg" alt="" class="menu-icon">
+        </label>
+        <input type="checkbox" id="menu-toggle">
+
+          <ul class="navbar-list">
+              <li> <a href="index.html">HOME</a> </li>
+              <li> <a href="#products">COLECCIÓN</a> </li>
+              <li> <a href="#about">ABOUT</a> </li>
+              <li> <a href="#contact">CONTACTO</a> </li>
+              <li> <a href="registro.html">REGISTRARSE</a> </li>
+              <li> <a href="login.html">INICIAR SESIÓN</a> </li>
+          </ul>
+          <img src="assets/img/bag-shopping-solid.svg" alt="bolsa-de-compras" class="shopping-bag-icon">
+  
+        </nav>
+      </header>
+
+      <section id="login">
+       <div class="form-box">
+          <h3>INGRESÁ</h3>
+          <form action="" class="form">
+            <label for="nombre">Nombre de usuario</label>
+            <input type="text" id="nombre" placeholder="Ingresá tu nombre de usuario">
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="Ingresá tu contraseña" required>
+
+            <button>INGRESAR</button>
+          </form>
+
+       </div>
+      </section>
+</body>
+</html>

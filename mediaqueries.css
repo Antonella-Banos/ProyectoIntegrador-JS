@@ -1,0 +1,310 @@
+/* Tablet */
+
+@media (max-width: 992px) {
+
+    /* Header */
+
+    .navbar {
+        gap: 5px;
+    }
+    
+    .navbar-list {
+       position: absolute;
+       top: 65px;
+       left: 5%;
+       right: 5%;
+       width: 90%;
+       flex-direction: column;
+       background-color: #dfa1a1;
+       border: 2px solid #f19c93;
+       border-top: 0px;
+       border-radius: 0px 0px 10px 10px;
+       align-items: flex-start;
+       padding: 45px 30px;
+       gap: 20px;
+       z-index: 2;
+       display: none;
+    }
+
+    /* Menú */
+
+    .menu-label {
+        display: flex;
+        order: 2;
+        cursor: pointer;
+    }
+
+    .shopping-bag-icon {
+        height: 25px;
+        width: 25px;
+    }
+
+    #menu-toggle:checked + 
+    .navbar-list {
+        display: flex;
+    }
+
+    /* Hero */
+
+    #hero {
+        margin-top: 100px;
+    }
+
+    .hero-card {
+        display: none;
+    }
+
+    .hero-info {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero-info h1 {
+        width: 90%;
+        max-width: 500px;
+        min-width: unset;
+        font-size: 35px;
+    }
+
+    .hero-info p {
+        font-size: 18px;
+    }
+
+    /* Newsletter */
+    
+    #newsletter {
+        flex-wrap: wrap;
+    }
+
+    .newsletter-container {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* Contact */
+
+    #contact {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-bottom: 70px;
+    }
+
+    .contact-map {
+        margin-top: 70px;
+    }
+
+    .contact-map iframe {
+        width: 90%;
+    }
+} 
+
+   
+/* Tablet */
+
+@media (max-width: 526px) {
+
+    /* Products */
+
+    #products {
+       width: 90%;
+    }
+
+    .clothing-item {
+        width: 80%;
+    }
+
+    .clothing-item img {
+        width: 90%;
+    }
+
+    /* Login/Registro */
+
+    .form input {
+       width: 300px;
+    }
+
+    .form-box {
+        width: 400px;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 450px) {
+
+    /* Header */
+
+    .logo {
+        height: 50%;
+    }
+
+    .navbar {
+        gap: none;
+    }
+
+    .shopping-bag-icon {
+        margin-right: 0.5rem;
+    }
+
+    /* Sections */
+
+    #hero,
+    #products,
+    #about {
+        width: 80%;
+    }
+
+    /* Products */
+
+    .clothing-item {
+        width: 100%;
+    }
+
+    .product-title h2,
+    .about-info h2,
+    .newsletter-container h3,
+    .contact-info h3,
+    .contact-map h3 {
+        font-size: 30px;
+    }
+
+    /* Form */
+
+    .form label {
+        font-size: 18px;
+    }
+
+    .form input {
+        height: 40px;
+        width: 230px;
+    }
+
+    /* Contact */
+
+    .contact-info,
+    .contact-map {
+        width: 80%;
+    }
+
+    /* Login/Registro */
+
+    #registro, 
+    #login {
+        width: 80%;
+    }
+
+    .form-box {
+        width: 300px;
+    }
+    
+}  
+
+/* Celular */
+
+@media (max-width: 360px) {
+
+    /* Products */
+
+    .clothing-item img {
+        width: 100%;
+    }
+
+    /* About section */
+
+    .about-info p {
+        width: 80%;
+    }
+
+    /* Newsletter section */
+
+    .newsletter-container h3 {
+       min-width: unset;
+       width: 80%;
+       padding: 0px 20px;
+
+    }
+
+    /* Login/Registro */
+
+    .form-box {
+        width: 270px;
+        height: 350px;
+    }
+
+    .form {
+        gap: 8px;
+    }
+
+    .form-box h3,
+    .form label {
+        font-size: 15px;
+    }
+
+    .form input {
+        height: 35px;
+        width: 210px;
+    }
+
+    /* Footer */
+
+    footer span {
+        font-size: 12px;
+    }
+}
+
+/* Celular */
+
+@media (max-width: 320px) {
+
+    /* Header */
+
+    header {
+        padding: 0px 20px;
+    }
+
+    /* Sections */
+
+    #hero, #products, #about {
+        width: 90%;
+    }
+
+    /* Products */
+
+    .clothing-item-title h3,
+    .clothing-item-price {
+        font-size: small;
+    }
+
+    /* About */
+
+    .about-info p {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .about-info p:nth-child(3) {
+        padding: 0px 20px;
+    }
+
+    /* Form */
+
+    .form {
+        width: 90%;
+    }
+
+    /* Contact */
+    
+    #contact {
+        padding-bottom: 40px;
+    }
+
+    .contact-map {
+        display: none;
+    }
+}
+
