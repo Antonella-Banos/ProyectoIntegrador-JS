@@ -131,6 +131,19 @@
     .form-box {
         width: 400px;
     }
+
+    /* Bolsa de compras */
+
+    .shopping-bag {
+        left: 0;
+        width: 100%;
+        border: none;
+    }
+
+    .shopping-bag-product-container {
+        flex-wrap: wrap;
+    }
+
 }
 
 /* Tablet */
