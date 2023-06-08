@@ -27,7 +27,8 @@
 
 .hero-button:hover,
 .btn-buy:hover,
-.form button:hover {
+.form button:hover,
+.category:hover {
     transform: scale(1.1);
     transition: all 0.5s;
 }

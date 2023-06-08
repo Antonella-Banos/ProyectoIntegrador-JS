@@ -281,6 +281,29 @@ main {
     margin-bottom: 50px;
 }
 
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category {
+    color: white;
+    background: linear-gradient(to top, #dfa1a1, #f19c93);
+    width: 100px;
+    padding: 8px 0px;
+    text-align: center;
+    border: #dfa1a1;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.active {
+    background: rgb(215, 165, 165);
+}
+
 .products-container {
     display: flex;
     justify-content: center;
@@ -398,6 +421,7 @@ main {
     justify-content: center;
     gap: 20px;
     width: 80%;
+    padding: 0px 15px;
 }
 
 .newsletter-container h3 {
@@ -418,7 +442,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    padding: 0px 15px;
 }
 
 .form {
@@ -432,7 +456,7 @@ main {
 
 .form input {
     height: 30px;
-    width: 400px;
+    width: 370px;
 }
 
 .form button {
