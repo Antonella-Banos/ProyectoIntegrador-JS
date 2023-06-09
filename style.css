@@ -181,7 +181,8 @@ header {
     display: flex;
 }
 
-.btn-add {
+.btn-add,
+.btn-delete {
     border: 1px solid black;
     cursor: pointer;
     padding: 10px 35px;
@@ -189,7 +190,8 @@ header {
     background-color:  rgb(215, 165, 165);
 }
 
-.btn-add span {
+.btn-add span,
+.btn-delete span {
     color: white;
 }
 
@@ -636,4 +638,3 @@ footer span > b {
     cursor: pointer;
     padding: 0;
 }
-
