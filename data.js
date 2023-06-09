@@ -1,7 +1,13 @@
 const boton = document.querySelector(".btn-buy");
 
+const productId = product.dataset.productId;
+const productName = product.dataset.productName;
+const productPrice = product.dataset.productPrice;
+const productCategory = product.dataset.productCategory;
+const productImg = product.dataset.productImg;
 
-const = productsData [
+
+const productsData = [
     {
         id: 1,
         prodName: "BLUSA VANESSA",
@@ -46,26 +52,30 @@ const = productsData [
     },
 ];
 
-const createBotonData = (botonData) => {
-    return `
-    <button 
-    class="btn-buy" 
-    data-id:"${botonData.id}"
-    data-name: "${botonData.prodName}"
-    data-price: "${botonData.prodPrice}"
-    data-img: "${botonData.prodImg}">COMPRAR</button>
-    `
-}
-
-const renderBoton = ( ) => {
-    boton.innerHTML = productsData.map((botonData) => createBotonData(botonData)).join("");
-
-}
 
 
-const init = ( ) => {
-    document.addEventListener("DOMContentLoaded", renderBoton);
 
-}
 
-init();
+// const createBotonData = (botonData) => {
+//     return `
+//     <button 
+//     class="btn-buy" 
+//     data-id:"${botonData.id}"
+//     data-name: "${botonData.prodName}"
+//     data-price: "${botonData.prodPrice}"
+//     data-img: "${botonData.prodImg}">COMPRAR</button>
+//     `
+// }
+
+// const renderBoton = ( ) => {
+//     boton.innerHTML = productsData.map((botonData) => createBotonData(botonData)).join("");
+
+// }
+
+
+// const init = ( ) => {
+//     document.addEventListener("DOMContentLoaded", renderBoton);
+
+// }
+
+// init();
