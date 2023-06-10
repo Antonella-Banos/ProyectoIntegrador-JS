@@ -63,6 +63,24 @@ header {
     position: relative;
 }
 
+.shopping-bag-bubble {
+        position: absolute;
+        top: 5px;
+        bottom: 2px;
+        text-align: center;
+        background: palevioletred;
+        color: white;
+        font-size: 10px;
+        font-weight: 300;
+        height: 18px;
+        width: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1px;
+        border-radius: 50%;
+}
+
 /* Bolsa de compras */
 
 .shopping-bag {

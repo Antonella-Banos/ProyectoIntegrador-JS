@@ -1,14 +1,5 @@
 const boton = document.querySelector(".btn-buy");
 
-let product = productsData;
-
-const productId = product.dataset.productId;
-const productName = product.dataset.productName;
-const productPrice = product.dataset.productPrice;
-const productCategory = product.dataset.productCategory;
-const productImg = product.dataset.productImg;
-
-
 const productsData = [
     {
         id: 1,
