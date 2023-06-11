@@ -44,6 +44,12 @@
         display: flex;
     }
 
+    /* Open menú */
+
+    .open-menu {
+        display: flex;
+    }
+
     /* Hero */
 
     #hero {

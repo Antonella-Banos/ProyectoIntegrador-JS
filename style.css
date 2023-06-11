@@ -223,7 +223,7 @@ header {
 }
   
 .empty-msg {
-    color: var(--text-gray);
+    color: grey;
     font-size: 14px;
 }
 
@@ -683,6 +683,7 @@ footer span > b {
   cursor: not-allowed;
   border: none;
 }
+
 .disabled:hover {
   background-color: lightgray;
   color: white;

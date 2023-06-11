@@ -40,7 +40,7 @@
         <div class="shopping-bag">
           <h2>MIS PRODUCTOS</h2>
 
-          <div class="shopping-bag-product-container">
+          <!-- <div class="shopping-bag-product-container">
             <img src="./assets/img/shopping-bag-item.jpg" alt="producto de la bolsa">
 
             <div class="shop-bag-c-item-info">
@@ -53,68 +53,7 @@
               <span class="product-quantity">1</span>
               <span class="quantity-handler up" data-id:="id"> <span>+</span> </span>
             </div>
-          </div>
-
-          <div class="shopping-bag-product-container">
-            <img src="./assets/img/shopping-bag-item.jpg" alt="producto de la bolsa">
-
-            <div class="shop-bag-c-item-info">
-              <h3 class="shop-bag-c-item-title">BLUSA VANESSA</h3>
-              <span class="shop-bag-c-item-price">$8000</span>
-            </div>
-
-            <div class="product-handler">
-              <span class="quantity-handler down" data-id:="id"> <span>-</span> </span>
-              <span class="product-quantity">1</span>
-              <span class="quantity-handler up" data-id:="id"> <span>+</span> </span>
-            </div>
-          </div>
-
-          <div class="shopping-bag-product-container">
-            <img src="./assets/img/shopping-bag-item.jpg" alt="producto de la bolsa">
-
-            <div class="shop-bag-c-item-info">
-              <h3 class="shop-bag-c-item-title">BLUSA VANESSA</h3>
-              <span class="shop-bag-c-item-price">$8000</span>
-            </div>
-
-            <div class="product-handler">
-              <span class="quantity-handler down" data-id:="id"> <span>-</span> </span>
-              <span class="product-quantity">1</span>
-              <span class="quantity-handler up" data-id:="id"> <span>+</span> </span>
-            </div>
-          </div>
-
-          <div class="shopping-bag-product-container">
-            <img src="./assets/img/shopping-bag-item.jpg" alt="producto de la bolsa">
-
-            <div class="shop-bag-c-item-info">
-              <h3 class="shop-bag-c-item-title">BLUSA VANESSA</h3>
-              <span class="shop-bag-c-item-price">$8000</span>
-            </div>
-
-            <div class="product-handler">
-              <span class="quantity-handler down" data-id:="id"> <span>-</span> </span>
-              <span class="product-quantity">1</span>
-              <span class="quantity-handler up" data-id:="id"> <span>+</span> </span>
-            </div>
-          </div>
-        
-          <div class="shopping-bag-product-container">
-            <img src="./assets/img/shopping-bag-item.jpg" alt="producto de la bolsa">
-
-            <div class="shop-bag-c-item-info">
-              <h3 class="shop-bag-c-item-title">BLUSA VANESSA</h3>
-              <span class="shop-bag-c-item-price">$8000</span>
-            </div>
-
-            <div class="product-handler">
-              <span class="quantity-handler down" data-id:="id"> <span>-</span> </span>
-              <span class="product-quantity">1</span>
-              <span class="quantity-handler up" data-id:="id"> <span>+</span> </span>
-            </div>
-          </div>
-        
+          </div> -->
         
           <span class="divider"></span>
 
@@ -127,7 +66,7 @@
         
         </div>
 
-        <div class="overlay"></div>
+        <!-- <div class="overlay"></div> -->
 
       </nav>
     </header>
@@ -156,28 +95,27 @@
         </h2> 
         <div class="categories">
           <button class="category active">TODAS</button>
-          <button class="category">BLUSAS</button>
-          <button class="category">TOPS</button>
-          <button class="category">JEANS</button>
-          <button class="category">VESTIDOS</button>
+          <button class="category" data-category="blusas">BLUSAS</button>
+          <button class="category" data-category="tops">TOPS</button>
+          <button class="category" data-category="jeans">JEANS</button>
+          <button class="category" data-category="vestidos">VESTIDOS</button>
         </div>
 
         <!-- products -->
         <div class="products-container">
 
-        <!-- product 1 -->
-        <div class="clothing-item">
+         <!-- <div class="clothing-item">
           <img src="assets/img/products/product1.png" alt="producto" class="rotate">
           <div class="clothing-item-info">
-          <!-- top -->
+
           <div class="clothing-item-title">
             <h3>BLUSA VANESSA</h3>
           </div>
-          <!-- mid -->
+
           <div class="clothing-item-price">
             <span>$8000</span>
           </div>
-          <!-- bot -->
+
           <div class="clothing-item-buy">
             <button class="btn-buy"
             data-id ="id"
@@ -186,123 +124,7 @@
             data-img="prodImg">COMPRAR</button>
           </div>
           </div>
-          </div>
-
-        <!-- product 2 -->
-        <div class="clothing-item">
-          <img src="assets/img/products/product2.png" alt="producto" class="rotate">
-          <div class="clothing-item-info">
-          <!-- top -->
-          <div class="clothing-item-title">
-            <h3>TOP ANGELA</h3>
-          </div>
-          <!-- mid -->
-          <div class="clothing-item-price">
-            <span>$7000</span>
-          </div>
-          <!-- bot -->
-          <div class="clothing-item-buy">
-            <button class="btn-buy"
-            data-id:"id"
-            data-name: "prodName"
-            data-price: "prodPrice"
-            data-img: "prodImg">COMPRAR</button>
-          </div>
-          </div>
-          </div>
-
-        <!-- product 3 -->
-        <div class="clothing-item">
-          <img src="assets/img/products/product3.png" alt="producto" class="rotate">
-          <div class="clothing-item-info">
-          <!-- top -->
-          <div class="clothing-item-title">
-            <h3>TOP MARINA</h3>
-          </div>
-          <!-- mid -->
-          <div class="clothing-item-price">
-            <span>$6500</span>
-          </div>
-          <!-- bot -->
-          <div class="clothing-item-buy">
-            <button class="btn-buy"
-            data-id:"id"
-            data-name: "prodName"
-            data-price: "prodPrice"
-            data-img: "prodImg">COMPRAR</button>
-          </div>
-          </div>
-          </div>
-
-        <!-- product 4 -->
-        <div class="clothing-item">
-          <img src="assets/img/products/product4.png" alt="producto" class="rotate">
-          <div class="clothing-item-info">
-          <!-- top -->
-          <div class="clothing-item-title">
-            <h3>TOP ROSALIA</h3>
-          </div>
-          <!-- mid -->
-          <div class="clothing-item-price">
-            <span>$6500</span>
-          </div>
-          <!-- bot -->
-          <div class="clothing-item-buy">
-            <button class="btn-buy"
-            data-id:"id"
-            data-name: "prodName"
-            data-price: "prodPrice"
-            data-img: "prodImg">COMPRAR</button>
-          </div>
-          </div>
-          </div>
-
-        <!-- product 5 -->
-        <div class="clothing-item">
-          <img src="assets/img/products/product5.png" alt="producto" class="rotate">
-          <div class="clothing-item-info">
-          <!-- top -->
-          <div class="clothing-item-title">
-            <h3>JEANS FAUSTINA</h3>
-          </div>
-          <!-- mid -->
-          <div class="clothing-item-price">
-            <span>$9000</span>
-          </div>
-          <!-- bot -->
-          <div class="clothing-item-buy">
-            <button class="btn-buy"
-            data-id:"id"
-            data-name: "prodName"
-            data-price: "prodPrice"
-            data-img: "prodImg">COMPRAR</button>
-          </div>
-          </div>
-          </div>
-
-        <!-- product 6 -->
-        <div class="clothing-item">
-          <img src="assets/img/products/product6.png" alt="producto" class="rotate">
-          <div class="clothing-item-info">
-          <!-- top -->
-          <div class="clothing-item-title">
-            <h3>VESTIDO ISABELLA</h3>
-          </div>
-          <!-- mid -->
-          <div class="clothing-item-price">
-            <span>$10000</span>
-          </div>
-          <!-- bot -->
-          <div class="clothing-item-buy">
-            <button 
-            class="btn-buy" 
-            data-id:"id"
-            data-name: "prodName"
-            data-price: "prodPrice"
-            data-img: "prodImg">COMPRAR</button>
-          </div>
-          </div>
-          </div>
+          </div> -->
 
       </section>
 

@@ -1,5 +1,3 @@
-const boton = document.querySelector(".btn-buy");
-
 const productsData = [
     {
         id: 1,
@@ -46,29 +44,8 @@ const productsData = [
 ];
 
 
+const appState = {
+    activeFilter: null,
+};
 
 
-
-// const createBotonData = (botonData) => {
-//     return `
-//     <button 
-//     class="btn-buy" 
-//     data-id:"${botonData.id}"
-//     data-name: "${botonData.prodName}"
-//     data-price: "${botonData.prodPrice}"
-//     data-img: "${botonData.prodImg}">COMPRAR</button>
-//     `
-// }
-
-// const renderBoton = ( ) => {
-//     boton.innerHTML = productsData.map((botonData) => createBotonData(botonData)).join("");
-
-// }
-
-
-// const init = ( ) => {
-//     document.addEventListener("DOMContentLoaded", renderBoton);
-
-// }
-
-// init();
