@@ -1,5 +1,6 @@
 const productsContainer = document.querySelector(".products-container");
 const categoriesContainer = document.querySelector(".categories");
+const categoriesList = document.querySelectorAll(".category");
 
 
 
@@ -40,8 +41,46 @@ const renderProducts = (productsList) => {
 };
 
 
-const applyFilter = () => {
-    
+const isInactiveFilterBtn = (element) => {
+    return (
+       element.classList.contains("category") && 
+       !element.classList.contains("active")
+    )
+};
+
+const changeBtnActiveState = (selectedCategory) => {
+    const categories = [...categoriesList];
+    categories.forEach((categoryBtn) => {
+       if (categoryBtn.dataset.category !== selectedCategory) {
+           categoryBtn.classList.remove("active");
+           return;
+       }
+       categoryBtn.classList.add("active");
+    })
+}
+
+const changeFilterState = (btn) => {
+    appState.activeFilter = btn.dataset.category;
+    changeBtnActiveState(appState.activeFilter);
+};
+
+const renderFilteredProducts = () => {
+    const filteredProducts = productsData.filter((product) => {
+       return product.category === appState.activeFilter;
+    });
+    renderProducts(filteredProducts);
+};
+
+const applyFilter = ({target}) => {
+    if (!isInactiveFilterBtn(target)) {
+       return; 
+    }
+    changeFilterState(target);
+    productsContainer.innerHTML = "";
+    if (appState.activeFilter) {
+       renderFilteredProducts();
+       return;
+    }
 };
 
 
