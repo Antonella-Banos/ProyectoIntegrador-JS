@@ -66,7 +66,7 @@ const changeFilterState = (btn) => {
 
 const renderFilteredProducts = () => {
     const filteredProducts = productsData.filter((product) => {
-       return product.category === appState.activeFilter;
+       return product.prodCategory === appState.activeFilter;
     });
     renderProducts(filteredProducts);
 };
