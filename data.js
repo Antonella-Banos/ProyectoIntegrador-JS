@@ -44,7 +44,18 @@ const productsData = [
 ];
 
 
+const showAllProducts = (size) => {
+    let productsList = [];
+    for (let i = 0; i < productsData.length; i += size) {
+        productsList.push(productsData.slice(i, i + size));
+    };
+    return productsList;
+}
+
 const appState = {
+    products: showAllProducts(6),
+    currentProductsIndex: 0,
+    productsLimit: showAllProducts(6).length,
     activeFilter: null,
 };
 

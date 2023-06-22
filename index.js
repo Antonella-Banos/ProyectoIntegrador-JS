@@ -79,15 +79,17 @@ const applyFilter = ({target}) => {
     productsContainer.innerHTML = "";
     if (appState.activeFilter) {
        renderFilteredProducts();
+       appState.currentProductsIndex = 0;
        return;
     }
+    renderProducts(appState.products[0]);
 };
 
 
 
 
 const init = () => {
-    renderProducts(productsData);
+    renderProducts(appState.products[appState.currentProductsIndex]);
     categoriesContainer.addEventListener("click", applyFilter);
 };
 
