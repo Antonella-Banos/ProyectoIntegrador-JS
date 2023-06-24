@@ -1,6 +1,10 @@
 const productsContainer = document.querySelector(".products-container");
 const categoriesContainer = document.querySelector(".categories");
 const categoriesList = document.querySelectorAll(".category");
+const shoppingBagBtn = document.querySelector(".shopping-bag-label");
+const shoppingBagMenu = document.querySelector(".shopping-bag");
+const menuBtn = document.querySelector(".menu-label");
+const barsMenu = document.querySelector(".navbar-list");
 
 
 
@@ -86,11 +90,28 @@ const applyFilter = ({target}) => {
 };
 
 
+const toggleShoppingBag = () => {
+    shoppingBagMenu.classList.toggle("open-shopping-bag");
+    if (barsMenu.classList.contains("open-menu")) {
+        barsMenu.classList.remove("open-menu");
+        return;
+    }
+};
+
+const toggleMenu = () => {
+    barsMenu.classList.toggle("open-menu");
+    if (shoppingBagMenu.classList.contains("open-shopping-bag")) {
+        shoppingBagMenu.classList.remove("open-shopping-bag");
+        return;
+    }
+}
 
 
 const init = () => {
     renderProducts(appState.products[appState.currentProductsIndex]);
     categoriesContainer.addEventListener("click", applyFilter);
+    shoppingBagBtn.addEventListener("click", toggleShoppingBag);
+    menuBtn.addEventListener("click", toggleMenu);
 };
 
 init();
