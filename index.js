@@ -106,12 +106,28 @@ const toggleMenu = () => {
     }
 }
 
+const closeOnScroll = () => {
+    if (!barsMenu.classList.contains("open-menu") && !shoppingBagMenu.classList.contains("open-shopping-bag")) {
+        return
+    }
+    barsMenu.classList.remove("open-menu");
+    shoppingBagMenu.classList.remove("open-shopping-bag");
+}
+
+const closeOnClick = (e) => {
+    if (!e.target.classList.contains("navbar-link")) {
+        return;
+    }
+    barsMenu.classList.remove("open-menu");
+}
 
 const init = () => {
     renderProducts(appState.products[appState.currentProductsIndex]);
     categoriesContainer.addEventListener("click", applyFilter);
     shoppingBagBtn.addEventListener("click", toggleShoppingBag);
     menuBtn.addEventListener("click", toggleMenu);
+    window.addEventListener("scroll", closeOnScroll);
+    barsMenu.addEventListener("click", closeOnClick);
 };
 
 init();
