@@ -97,6 +97,8 @@ header {
     overflow-y: scroll;
     display: none;
     z-index: 2;
+    transform: translate(200%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
 /* Barra de scroll del carrito oculta */
