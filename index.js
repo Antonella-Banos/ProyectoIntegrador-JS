@@ -6,6 +6,12 @@ const shoppingBagMenu = document.querySelector(".shopping-bag");
 const menuBtn = document.querySelector(".menu-label");
 const barsMenu = document.querySelector(".navbar-list");
 const shoppingBagProducts = document.querySelector(".shopping-bag-product-container");
+const total = document.querySelector(".total");
+const successModal = document.querySelector(".add-modal");
+const btnAdd = document.querySelector(".btn-add");
+const btnDelete = document.querySelector(".btn-delete");
+const shopBagBubble = document.querySelector(".shopping-bag-bubble");
+
 
 let shoppingBag = JSON.parse(localStorage.getItem("shoppingBag")) || [];
 
@@ -158,6 +164,90 @@ const renderShoppingBag = () => {
     shoppingBagProducts.innerHTML = shoppingBag.map(createShopBagProductTemplate).join("");
 };
 
+const getShoppingBagTotal = () => {
+    return shoppingBag.reduce((acc, val) => {
+        return acc + Number(val.prodPrice) * Number(val.quantity);   
+    }, 0);
+};
+
+const showShoppingBagTotal = () => {
+    total.innerHTML = `$${getShoppingBagTotal()}`;
+};
+
+const createProductData = (product) => {
+    const {id, prodName, prodPrice, prodImg} = product;
+    return {id, prodName, prodPrice, prodImg};
+};
+
+const doesShopBagProductExists = (productId) => {
+    return shoppingBag.find((item) => {
+        return item.id === productId;
+    });
+};
+
+const addUnitToShopBag = (product) => {
+    shoppingBag = shoppingBag.map((shopBagProduct) => {
+        return shopBagProduct.id === product.id 
+          ? {...shopBagProduct, quantity: shopBagProduct.quantity + 1}
+          : shopBagProduct;
+    });
+};
+
+const showSuccessModal = (msg) => {
+    successModal.classList.add("active-modal");
+    successModal.textContent = msg;
+    setTimeout(() => {
+        successModal.classList.remove("active-modal");
+    }, 1500);
+};
+
+const shopBagProductCreation = (product) => {
+    shoppingBag = [
+       ...shoppingBag,
+       {
+          ...product,
+          quantity: 1,
+       },
+    ];
+};
+
+const disableBtn = (btn) => {
+    if (!shoppingBag.length) {
+        btn.classList.add("disabled");
+    } else {
+        btn.classList.remove("disabled");
+    }
+};
+
+const renderShopBagBubble = () => {
+    shopBagBubble.textContent = shoppingBag.reduce((acc, val) => {
+        return acc + Number (val.quantity);
+    }, 0);
+};
+
+const updateShoppingBagState = () => {
+    saveShoppingBag();
+    renderShoppingBag();
+    showShoppingBagTotal();
+    disableBtn(btnAdd);
+    disableBtn(btnDelete);
+    renderShopBagBubble();
+}
+
+const addProduct = (e) => {
+    if (!e.target.classList.contains("btn-buy")) {
+        return;
+    }
+    const product = createProductData(e.target.dataset);
+    if (doesShopBagProductExists(product.id)) {
+        addUnitToShopBag(product);
+        showSuccessModal("Se agregó una unidad del producto a la bolsa de compras");
+    } else {
+        shopBagProductCreation(product); 
+        showSuccessModal("El producto se ha agregado a la bolsa de compras");
+    }
+    updateShoppingBagState();
+};
 
 const init = () => {
     renderProducts(appState.products[appState.currentProductsIndex]);
@@ -167,6 +257,12 @@ const init = () => {
     window.addEventListener("scroll", closeOnScroll);
     barsMenu.addEventListener("click", closeOnClick);
     document.addEventListener("DOMContentLoaded", renderShoppingBag);
+    document.addEventListener("DOMContentLoaded", showShoppingBagTotal);
+    productsContainer.addEventListener("click", addProduct);
+    shoppingBagProducts.addEventListener()
+    disableBtn(btnAdd);
+    disableBtn(btnDelete);
+    renderShopBagBubble();
 };
 
 init();
