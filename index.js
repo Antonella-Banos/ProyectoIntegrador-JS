@@ -5,8 +5,13 @@ const shoppingBagBtn = document.querySelector(".shopping-bag-label");
 const shoppingBagMenu = document.querySelector(".shopping-bag");
 const menuBtn = document.querySelector(".menu-label");
 const barsMenu = document.querySelector(".navbar-list");
+const shoppingBagProducts = document.querySelector(".shopping-bag-product-container");
 
+let shoppingBag = JSON.parse(localStorage.getItem("shoppingBag")) || [];
 
+const saveShoppingBag = () => {
+    localStorage.setItem("shoppingBag", JSON.stringify(shoppingBag));
+};
 
 
 const productTemplateCreation = (product) => {
@@ -121,6 +126,39 @@ const closeOnClick = (e) => {
     barsMenu.classList.remove("open-menu");
 }
 
+// Lógica de la bolsa de compras 
+
+const createShopBagProductTemplate = (shopBagProduct) => {
+     
+    const {id, prodName, prodPrice, prodImg, quantity} = shopBagProduct;
+
+    return `
+    <div class="shopping-bag-product-container">
+    <img src=${prodImg} alt="producto de la bolsa">
+
+    <div class="shop-bag-c-item-info">
+      <h3 class="shop-bag-c-item-title">${prodName}</h3>
+      <span class="shop-bag-c-item-price">${prodPrice}</span>
+    </div>
+
+    <div class="product-handler">
+      <span class="quantity-handler down" data-id=${id}> <span>-</span> </span>
+      <span class="product-quantity">${quantity}</span>
+      <span class="quantity-handler up" data-id=${id}> <span>+</span> </span>
+    </div>
+    </div>
+    `
+};
+
+const renderShoppingBag = () => {
+    if (!shoppingBag.length) {
+        shoppingBagProducts.innerHTML = `<p class = "empty-msg"> No hay productos en la bolsa. </p>`;
+        return;
+    }
+    shoppingBagProducts.innerHTML = shoppingBag.map(createShopBagProductTemplate).join("");
+};
+
+
 const init = () => {
     renderProducts(appState.products[appState.currentProductsIndex]);
     categoriesContainer.addEventListener("click", applyFilter);
@@ -128,6 +166,7 @@ const init = () => {
     menuBtn.addEventListener("click", toggleMenu);
     window.addEventListener("scroll", closeOnScroll);
     barsMenu.addEventListener("click", closeOnClick);
+    document.addEventListener("DOMContentLoaded", renderShoppingBag);
 };
 
 init();
