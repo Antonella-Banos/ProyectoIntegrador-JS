@@ -249,6 +249,69 @@ const addProduct = (e) => {
     updateShoppingBagState();
 };
 
+const removeProductFromShopBag = (existingProduct) => {
+     shoppingBag = shoppingBag.filter((product) => {
+        return product.id !== existingProduct.id 
+     });
+     updateShoppingBagState();
+};
+
+const substractProductUnit = (existingProduct) => {
+     shoppingBag = shoppingBag.map((product) => {
+        return product.id === existingProduct.id
+           ? {...product, quantity: Number(product.quantity) - 1}
+           : product;
+     });
+};
+
+const handleMinusBtn = (id) => {
+     const existingShopBagProduct = shoppingBag.find((item) => item.id === id);
+
+     if (doesShopBagProductExists.quantity === 1) {
+        if (window.confirm("¿Desea eliminar el producto?")) {
+            removeProductFromShopBag(existingShopBagProduct)
+        }
+        return;
+     }
+     substractProductUnit(existingShopBagProduct);
+};
+
+const handlePlusBtn = (id) => {
+     const existingShopBagProduct = shoppingBag.find((item) => item.id === id);
+     addUnitToShopBag(existingShopBagProduct)
+}
+
+const handleQuantity = (e) => {
+    if (e.target.classList.contains("down")) {
+        handleMinusBtn(e.target.dataset.id);
+    } else if (e.target.classList.contains("up")) {
+        handlePlusBtn(e.target.dataset.id);
+    }
+    updateShoppingBagState();
+};
+
+const resetShopBagItem = () => {
+    shoppingBag = [];
+    updateShoppingBagState();
+};
+
+const completeShopBagAction = (confirmMsg, successMsg) => {
+    if (!shoppingBag.length) return;
+
+    if (window.confirm(confirmMsg)) {
+        resetShopBagItem();
+        alert(successMsg);
+    }
+};
+
+const completeBuy = () => {
+    completeShopBagAction("¿Desea completar su compra?", "¡Gracias por su compra!");
+};
+
+const deleteShopBag = () => {
+    completeShopBagAction("¿Desea vaciar el carrito?", "No hay productos en la bolsa");
+};
+
 const init = () => {
     renderProducts(appState.products[appState.currentProductsIndex]);
     categoriesContainer.addEventListener("click", applyFilter);
@@ -259,7 +322,9 @@ const init = () => {
     document.addEventListener("DOMContentLoaded", renderShoppingBag);
     document.addEventListener("DOMContentLoaded", showShoppingBagTotal);
     productsContainer.addEventListener("click", addProduct);
-    shoppingBagProducts.addEventListener()
+    shoppingBagProducts.addEventListener("click", handleQuantity);
+    btnAdd.addEventListener("click", completeBuy);
+    btnDelete.addEventListener("click", deleteShopBag);
     disableBtn(btnAdd);
     disableBtn(btnDelete);
     renderShopBagBubble();
