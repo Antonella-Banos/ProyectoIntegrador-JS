@@ -136,11 +136,11 @@ const closeOnClick = (e) => {
 
 const createShopBagProductTemplate = (shopBagProduct) => {
      
-    const {id, prodName, prodPrice, prodImg, quantity} = shopBagProduct;
+    const {id, name, price, img, quantity} = shopBagProduct;
 
     return `
     <div class="shopping-bag-product-container">
-    <img src=${prodImg} alt="producto de la bolsa">
+    <img src=${img} alt="producto de la bolsa">
 
     <div class="shop-bag-c-item-info">
       <h3 class="shop-bag-c-item-title">${prodName}</h3>
