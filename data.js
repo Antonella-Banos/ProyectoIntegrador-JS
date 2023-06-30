@@ -4,7 +4,7 @@ const productsData = [
         name: "BLUSA VANESSA",
         price: "$8000",
         category: "blusas",
-        category: "./assets/img/products/product1.png",
+        img: "./assets/img/products/product1.png",
     },
     {
         id: 2,
