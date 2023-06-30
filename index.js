@@ -115,7 +115,7 @@ const toggleMenu = () => {
         shoppingBagMenu.classList.remove("open-shopping-bag");
         return;
     }
-}
+};
 
 const closeOnScroll = () => {
     if (!barsMenu.classList.contains("open-menu") && !shoppingBagMenu.classList.contains("open-shopping-bag")) {
@@ -123,14 +123,14 @@ const closeOnScroll = () => {
     }
     barsMenu.classList.remove("open-menu");
     shoppingBagMenu.classList.remove("open-shopping-bag");
-}
+};
 
 const closeOnClick = (e) => {
     if (!e.target.classList.contains("navbar-link")) {
         return;
     }
     barsMenu.classList.remove("open-menu");
-}
+};
 
 // Lógica de la bolsa de compras 
 
