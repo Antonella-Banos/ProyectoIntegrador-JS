@@ -21,27 +21,27 @@ const saveShoppingBag = () => {
 
 
 const productTemplateCreation = (product) => {
-    const {id, prodName, prodPrice, prodImg} = product;
+    const {id, name, price, img} = product;
 
     return `
     <div class="clothing-item">
-    <img src=${prodImg} alt=${prodName} class="rotate">
+    <img src=${img} alt=${name} class="rotate">
     <div class="clothing-item-info">
 
     <div class="clothing-item-title">
-      <h3>${prodName}</h3>
+      <h3>${name}</h3>
     </div>
 
     <div class="clothing-item-price">
-      <span>${prodPrice}</span>
+      <span>${price}</span>
     </div>
 
     <div class="clothing-item-buy">
       <button class="btn-buy"
       data-id =${id}
-      data-name =${prodName}
-      data-price =${prodPrice}
-      data-img=${prodImg}
+      data-name =${name}
+      data-price =${price}
+      data-img=${img}
       >COMPRAR</button>
     </div>
     </div>
@@ -81,7 +81,7 @@ const changeFilterState = (btn) => {
 
 const renderFilteredProducts = () => {
     const filteredProducts = productsData.filter((product) => {
-       return product.prodCategory === appState.activeFilter;
+       return product.category === appState.activeFilter;
     });
     renderProducts(filteredProducts);
 };
@@ -143,8 +143,8 @@ const createShopBagProductTemplate = (shopBagProduct) => {
     <img src=${img} alt="producto de la bolsa">
 
     <div class="shop-bag-c-item-info">
-      <h3 class="shop-bag-c-item-title">${prodName}</h3>
-      <span class="shop-bag-c-item-price">${prodPrice}</span>
+      <h3 class="shop-bag-c-item-title">${name}</h3>
+      <span class="shop-bag-c-item-price">${price}</span>
     </div>
 
     <div class="product-handler">
@@ -166,7 +166,7 @@ const renderShoppingBag = () => {
 
 const getShoppingBagTotal = () => {
     return shoppingBag.reduce((acc, val) => {
-        return acc + Number(val.prodPrice) * Number(val.quantity);   
+        return acc + Number(val.price) * Number(val.quantity);   
     }, 0);
 };
 
@@ -175,8 +175,8 @@ const showShoppingBagTotal = () => {
 };
 
 const createProductData = (product) => {
-    const {id, prodName, prodPrice, prodImg} = product;
-    return {id, prodName, prodPrice, prodImg};
+    const {id, name, price, img} = product;
+    return {id, name, price, img};
 };
 
 const doesShopBagProductExists = (productId) => {
