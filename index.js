@@ -278,8 +278,8 @@ const handleMinusBtn = (id) => {
 
 const handlePlusBtn = (id) => {
      const existingShopBagProduct = shoppingBag.find((item) => item.id === id);
-     addUnitToShopBag(existingShopBagProduct)
-}
+     addUnitToShopBag(existingShopBagProduct);
+};
 
 const handleQuantity = (e) => {
     if (e.target.classList.contains("down")) {
