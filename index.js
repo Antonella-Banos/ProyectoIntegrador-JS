@@ -171,7 +171,7 @@ const getShoppingBagTotal = () => {
 };
 
 const showShoppingBagTotal = () => {
-    total.innerHTML = `$${getShoppingBagTotal()}`;
+    total.innerHTML = `${getShoppingBagTotal()}`;
 };
 
 const createProductData = (product) => {
@@ -269,7 +269,7 @@ const handleMinusBtn = (id) => {
 
      if (doesShopBagProductExists.quantity === 1) {
         if (window.confirm("¿Desea eliminar el producto?")) {
-            removeProductFromShopBag(existingShopBagProduct)
+            removeProductFromShopBag(existingShopBagProduct);
         }
         return;
      }
