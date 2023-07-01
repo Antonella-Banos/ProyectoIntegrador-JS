@@ -309,7 +309,7 @@ const completeBuy = () => {
 };
 
 const deleteShopBag = () => {
-    completeShopBagAction("¿Desea vaciar el carrito?", "No hay productos en la bolsa");
+    completeShopBagAction("¿Desea vaciar la bolsa?", "No hay productos en la bolsa");
 };
 
 const init = () => {
