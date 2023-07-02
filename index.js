@@ -119,7 +119,7 @@ const toggleMenu = () => {
 
 const closeOnScroll = () => {
     if (!barsMenu.classList.contains("open-menu") && !shoppingBagMenu.classList.contains("open-shopping-bag")) {
-        return
+        return;
     }
     barsMenu.classList.remove("open-menu");
     shoppingBagMenu.classList.remove("open-shopping-bag");
