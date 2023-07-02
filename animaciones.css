@@ -23,6 +23,18 @@
     transform: scaleX(1);
 }
 
+/* Boton down de la bolsa de compras*/
+
+.down {
+    transition: all 0.2 ease-in;
+}
+
+.down:hover {
+    background-color: #f19c93;
+    transition: all 0.2 ease-in;
+    cursor: pointer;
+}
+
 /* Botones */
 
 .hero-button:hover,

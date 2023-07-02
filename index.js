@@ -33,7 +33,7 @@ const productTemplateCreation = (product) => {
     </div>
 
     <div class="clothing-item-price">
-      <span>${price}</span>
+      <span>$${price}</span>
     </div>
 
     <div class="clothing-item-buy">
@@ -144,7 +144,7 @@ const createShopBagProductTemplate = (shopBagProduct) => {
 
     <div class="shop-bag-c-item-info">
       <h3 class="shop-bag-c-item-title">${name}</h3>
-      <span class="shop-bag-c-item-price">${price}</span>
+      <span class="shop-bag-c-item-price">$${price}</span>
     </div>
 
     <div class="product-handler">
@@ -171,7 +171,7 @@ const getShoppingBagTotal = () => {
 };
 
 const showShoppingBagTotal = () => {
-    total.innerHTML = `${getShoppingBagTotal()}`;
+    total.innerHTML = `$${getShoppingBagTotal()}`;
 };
 
 const createProductData = (product) => {
