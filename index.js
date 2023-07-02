@@ -267,7 +267,7 @@ const substractProductUnit = (existingProduct) => {
 const handleMinusBtn = (id) => {
      const existingShopBagProduct = shoppingBag.find((item) => item.id === id);
 
-     if (doesShopBagProductExists.quantity === 1) {
+     if (existingShopBagProduct.quantity === 1) {
         if (window.confirm("¿Desea eliminar el producto?")) {
             removeProductFromShopBag(existingShopBagProduct);
         }
