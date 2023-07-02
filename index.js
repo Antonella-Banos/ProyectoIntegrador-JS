@@ -139,12 +139,12 @@ const createShopBagProductTemplate = (shopBagProduct) => {
     const {id, name, price, img, quantity} = shopBagProduct;
 
     return `
-    <div class="shopping-bag-product-container">
+    <div class="shopping-bag-item">
     <img src=${img} alt="producto de la bolsa">
 
-    <div class="shop-bag-c-item-info">
-      <h3 class="shop-bag-c-item-title">${name}</h3>
-      <span class="shop-bag-c-item-price">$${price}</span>
+    <div class="shop-bag-item-info">
+      <h3 class="shop-bag-item-title">${name}</h3>
+      <span class="shop-bag-item-price">$${price}</span>
     </div>
 
     <div class="product-handler">
@@ -152,7 +152,7 @@ const createShopBagProductTemplate = (shopBagProduct) => {
       <span class="product-quantity">${quantity}</span>
       <span class="quantity-handler up" data-id=${id}> <span>+</span> </span>
     </div>
-    </div>
+  </div>
     `
 };
 
