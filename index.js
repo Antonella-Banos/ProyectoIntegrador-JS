@@ -5,6 +5,7 @@ const shoppingBagBtn = document.querySelector(".shopping-bag-label");
 const shoppingBagMenu = document.querySelector(".shopping-bag");
 const menuBtn = document.querySelector(".menu-label");
 const barsMenu = document.querySelector(".navbar-list");
+const invisibleScreen = document.querySelector(".invisible-screen");
 const shoppingBagProducts = document.querySelector(".shopping-bag-product-container");
 const total = document.querySelector(".total");
 const successModal = document.querySelector(".add-modal");
@@ -107,6 +108,7 @@ const toggleShoppingBag = () => {
         barsMenu.classList.remove("open-menu");
         return;
     }
+    invisibleScreen.classList.toggle("show-invisible-screen");
 };
 
 const toggleMenu = () => {
@@ -115,6 +117,7 @@ const toggleMenu = () => {
         shoppingBagMenu.classList.remove("open-shopping-bag");
         return;
     }
+    invisibleScreen.classList.toggle("show-invisible-screen");
 };
 
 const closeOnScroll = () => {
@@ -123,6 +126,7 @@ const closeOnScroll = () => {
     }
     barsMenu.classList.remove("open-menu");
     shoppingBagMenu.classList.remove("open-shopping-bag");
+    invisibleScreen.classList.remove("show-invisible-screen");
 };
 
 const closeOnClick = (e) => {
@@ -130,7 +134,15 @@ const closeOnClick = (e) => {
         return;
     }
     barsMenu.classList.remove("open-menu");
+    invisibleScreen.classList.remove("show-invisible-screen");
 };
+
+const closeOnInvisibleScreenClick = () => {
+    barsMenu.classList.remove("open-menu");
+    shoppingBagMenu.classList.remove("open-shopping-bag");
+    invisibleScreen.classList.remove("show-invisible-screen");
+}
+
 
 // Lógica de la bolsa de compras 
 
@@ -319,6 +331,7 @@ const init = () => {
     menuBtn.addEventListener("click", toggleMenu);
     window.addEventListener("scroll", closeOnScroll);
     barsMenu.addEventListener("click", closeOnClick);
+    invisibleScreen.addEventListener("click", closeOnInvisibleScreenClick);
     document.addEventListener("DOMContentLoaded", renderShoppingBag);
     document.addEventListener("DOMContentLoaded", showShoppingBagTotal);
     productsContainer.addEventListener("click", addProduct);

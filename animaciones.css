@@ -1,3 +1,21 @@
+/* "Pantalla invisible" para cuando se abren el menú hamburguesa y la bolsa de compras" */ 
+
+.invisible-screen {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    display: none; 
+}
+
+/* Open menú */
+
+.show-invisible-screen {
+    display: flex;
+}
+
 /* Hover de los elementos "a" del navbar */
 
 .navbar-list li {
