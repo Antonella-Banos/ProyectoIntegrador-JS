@@ -39,7 +39,7 @@
         width: 25px;
     }
 
-    #menu-toggle:checked + 
+ 
     .navbar-list {
         display: flex;
     }

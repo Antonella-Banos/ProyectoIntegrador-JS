@@ -95,7 +95,6 @@ header {
     gap: 30px;
     height: calc(100vh - 65px);
     overflow-y: scroll;
-    display: none;
     z-index: 2;
     min-width: 375px;
     transform: translate(200%);
@@ -210,7 +209,7 @@ header {
 }
 
 
-#shopping-bag-toggle:checked + .shopping-bag {
+.shopping-bag {
     display: flex;
 }
 

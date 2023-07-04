@@ -137,7 +137,7 @@ const closeOnClick = (e) => {
     invisibleScreen.classList.remove("show-invisible-screen");
 };
 
-const closeOnInvisibleScreenClick = () => {
+const closeOnInvisibleScreenClick = () => { 
     barsMenu.classList.remove("open-menu");
     shoppingBagMenu.classList.remove("open-shopping-bag");
     invisibleScreen.classList.remove("show-invisible-screen");
