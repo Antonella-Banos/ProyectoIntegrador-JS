@@ -63,6 +63,14 @@
     transition: all 0.5s;
 }
 
+.btn-add:hover,
+.btn-delete:hover,
+.quantity-handler.down:hover,
+.quantity-handler.up:hover {
+    transform: scale(1.1);
+    transition: all 0.8s;
+}
+
 
 /* Productos */
 
