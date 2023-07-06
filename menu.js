@@ -1,4 +1,4 @@
-const menuBtn = document.querySelector(".menu-label");
+const menuBtn = document.querySelector(".menu-label"); 
 const barsMenu = document.querySelector(".navbar-list");
 const invisibleScreen = document.querySelector(".invisible-screen");
 
