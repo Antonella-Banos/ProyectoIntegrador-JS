@@ -5,9 +5,6 @@ const invisibleScreen = document.querySelector(".invisible-screen");
 
 const toggleMenu = () => {
     barsMenu.classList.toggle("open-menu");
-    if (barsMenu.classList.contains("open-menu")) {
-        return;
-    }
     invisibleScreen.classList.toggle("show-invisible-screen");
 };
 
