@@ -66,7 +66,7 @@ header {
 .shopping-bag-bubble {
         position: absolute;
         top: 5px;
-        bottom: 2px;
+        bottom: 10px;
         text-align: center;
         background: palevioletred;
         color: white;
